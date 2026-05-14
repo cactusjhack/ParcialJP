@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ASPPresentacion_Productos_JP.props" />
+</Project>

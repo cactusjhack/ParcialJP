@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+
+<center>
+    <div>
+        <h2>Bienvenido</h2>
+
+        <nav>
+            <ul style="list-style:none">
+                <li><a href="/Ventanas/Auditorias" class="btn btn-secondary">Auditorias</a></li>
+                <li><a href="/Ventanas/Productos" class="btn btn-secondary">Productos</a></li>
+                <li><a href="/Ventanas/Tiendas" class="btn btn-secondary">Tiendas</a></li>
+            </ul>
+        </nav>
+
+        <form method="post" asp-page-handler="BtSalir">
+            @Html.AntiForgeryToken()
+            <input type="submit" value="Salir"
+                   class="btn btn-danger" />
+        </form>
+    </div>
+</center>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ASPPresentacion_Productos_JP.props" />
+</Project>

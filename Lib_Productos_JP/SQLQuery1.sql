@@ -1,0 +1,29 @@
+CREATE DATABASE db_tienda;
+GO
+
+USE db_tienda;
+GO
+
+CREATE TABLE Auditorias(
+Id INT PRIMARY KEY IDENTITY(1,1),
+Tabla NVARCHAR(20), 
+Fecha DATETIME,
+Descripcion NVARCHAR(50),
+Accion NVARCHAR(200)
+);
+
+CREATE TABLE Tiendas (
+ Id INT PRIMARY KEY IDENTITY(1,1),
+ Nombre NVARCHAR(50),
+ Direccion NVARCHAR(MAX),
+ Activo BIT DEFAULT 0, 
+ FechaFundacion DATETIME
+ );
+
+CREATE TABLE Productos (
+Id INT PRIMARY KEY IDENTITY(1,1),
+Nombre NVARCHAR(50),
+Codigo NVARCHAR(50),
+Stock INT,
+Tienda INT REFERENCES Tiendas(Id)
+);
